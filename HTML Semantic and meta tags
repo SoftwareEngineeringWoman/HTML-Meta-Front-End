@@ -1,3 +1,11 @@
+seo analyses html and media content and then rank on search terms
+METATAGS:
+best seo practices: metadata is data about webpage, metadata tags are define metadata about a page
+<head><meta name="description(name of metadata)" content="(value of metadata)"></head>
+meta tags are unseen elements within the browser
+
+
+
 Metadata cheat sheet
 HTML <meta> tags 
 Earlier in the course, you learned about meta tags and how you can leverage them to convey information to search engines to better categorize your pages. We recommend that you keep this cheat sheet handy when building your web applications. The structure of a meta tag is as follows.
@@ -24,7 +32,7 @@ Basic meta tags (meta tags For SEO)
 
 <meta name="language" content="english"> specifies the language of the web page 
 
-<meta name="robots" content="index,follow" /> tells search engines how to crawl or index a certain page 
+<meta name="robots" content="index,follow, noindex, nofollow" /> tells search engines(bots) how to crawl or index a certain page 
 
 <meta name="google"/> tells Google not to show the sitelinks search box for your page when showing search results 
 
@@ -52,7 +60,7 @@ Responsive design/mobile meta tags
 
 <meta name="HandheldFriendly" content="true"/> specifies that the page can be properly visualized on mobile devices 
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/> specifies the area of the window in which web content can be seen
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/> specifies the area of the window in which web content can be seen (imp for ux, seo)
 
 Sectioning tags
 Use the following tags to organize your HTML document into structured sections. 
