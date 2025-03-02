@@ -1,0 +1,25 @@
+New features
+HTML: hyper(text has links for other texts) text markup(tags and elements used within a doc) language
+Share info over internet
+new features: better support for audio and video tags, responsive design(adapting web page layer depending upon what it is viewed on )
+new form input tags: sliders, range input, date , color pickers
+form validation features
+text editing and spell check
+dom: interact with elements on a webpage, so html doc should be in a way that js code can query and update it
+. it is model of the objects in html file. js wit dom can update content, set up events, animate elements
+
+
+
+
+CSS: 
+describe look of html doc (content and style)
+media queries according to the device used on
+box sizing
+multiple backg images for an element
+border images instead of a solid color or style
+text shadows for 3d effect
+transformations and transitions for animating elements on web page
+
+
+
+
