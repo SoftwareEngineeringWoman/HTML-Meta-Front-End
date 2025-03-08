@@ -1,0 +1,102 @@
+IDs
+Next in the hierarchy are IDs and by now you know that they are represented by ‘#’.  For example:
+#div
+
+Classes, attributes, and pseudo-classes
+Classes, and the attributes inside the selectors, come next with what is called the pseudo-classes that you will soon learn more about. 
+
+For example:
+
+.my-class 
+p[“attribute”]
+div:hover
+
+Calculating scores
+SS uses the hierarchical model internally to calculate the specificity of the selectors used on a web page. But often as the size of CSS code increases, developers unavoidably face rule conflicts. In these cases, developers use the specificity hierarchy to calculate the precedence of CSS rules and to control the outcome of their web pages. 
+
+Let’s explore a practical example of how to determine the score of a few selectors. 
+
+#hello {} will be 0100
+div {} will be 0001 and
+div p.foo {} will be 0012
+In the order stated above, the four categories will be assigned values 1000, 100, 10 and 1 with the element selectors having the lowest value of 1. These scores will be calculated respectively for each element present inside the selector. The total score for these elements is then calculated and the one with the highest value has the highest specificity.
+
+
+Pseudo-classes
+Pseudo-elements
+By now you know that pseudo-elements help you style a specific part of an element. For example, you can decide to apply styling to only the first word or line in a given element. First, let’s examine the syntax of a pseudo-element.
+Syntax
+selector::pseudo-element {
+ property: value; 
+}
+
+::first-letter
+You can use first-letter to change the color of just the first letter of each of the three points in the example text.
+li::first-letter { 
+color:coral; 
+font-size: 1.3em; 
+font-weight: bold; 
+line-height: 1; 
+} 
+
+::first-line
+First-line will change the complete first line of each of the bullet points to light sea green.
+
+::selection
+Selection is another useful pseudo-element. For example, you may use it when you are taking notes on your device because it allows you to highlight specific text. 
+
+::marker  
+Markers are typically used to add style elements to a list, for instance, to color bullet points. For example, you can enhance the user experience when you use a marker in the following way.
+
+
+Now the bullet points are cornflower blue and they have the shape specified in the code.
+::before and ::after
+One more pair of pseudo-elements are the ::before and ::after pseudo-elements. They allow you to add content before and after an element on which they are allowed. In other words, new content can be added to a page without adding HTML code for it. 
+    <p id="tips"> Peel and seed large tomatoes. </p>
+#tips::before{
+    background: darkkhaki;
+    color:darkslategray;
+    content: "Tip:";
+    padding-left: 3px;
+    padding-right: 5px;
+    border-radius: 10%;
+}
+
+#tips::after{
+    background:darkkhaki;
+    color:darkslategray;
+    content: "!!";
+    padding-right: 5px;
+    border-radius: 20%;
+}
+
+
+Simple selectors
+Selector          Syntax           Example
+
+Element           element            div {}
+Class             .class             .alpha {}
+ID                #id                #alpha {}
+Universal         *                  * {}
+
+Variations of simple selectors
+
+Two classes
+.first-class.second-class
+.alpha.beta {}
+All elements with classes alpha and beta
+
+Element and class
+element.class
+p.alpha {}
+All alpha class elements inside <p>
+
+Two elements
+element, element
+p, div {}
+All <p> and <div> elements
+
+Two elements
+element element
+p div {}
+All <div> elements inside <p>
