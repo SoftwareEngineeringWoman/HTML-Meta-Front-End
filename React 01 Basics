@@ -1,0 +1,215 @@
+complex components
+working in state with react
+HTML
+Recall that HTML is used to describe the structure of Web pages. Developers use HTML elements with their opening and closing tags to “mark up” an HTML document. 
+
+These elements form the structure of a web page and describe what to display to the web browser. When it comes to HTML it's important to know about:
+
+The purpose of HTML in the web browser,
+
+the use of HTML tags and correct syntax,
+
+and how HTML elements are used in a web document. 
+
+Another important concept to know about when you're talking about HTML is the Document Object Model, or DOM. 
+
+Users need to be able to interact with elements on a web page. This means that an HTML document must be represented in a way that JavaScript code can query and update it. And that's the function of the DOM. It's a model of the objects in your HTML file.
+
+And web developers interact with the DOM through JavaScript to update content, set up events and animate HTML elements.
+
+Before you learn React, it’s advisable that you are comfortable with the following HTML tags and concepts
+
+Layout & Style
+<html> 
+
+<head> 
+
+<body> 
+
+<div> 
+
+Text formatting & lists
+<h1>…<h6> 
+
+<p> 
+
+<ul><li> 
+
+<b><i> 
+
+Images and links
+<img src=""> 
+
+<a href=""> 
+
+Linking and Meta
+<link> 
+
+<title> 
+
+<meta> 
+
+Semantic
+<header> 
+
+CSS
+CSS (Cascading Style Sheets) is the code that you use to style HTML. You need to be familiar with basic CSS concepts before you start learning React. This is because you will need to style your React components as well, and basic CSS knowledge will help your learning journey.
+
+Before you learn React, make sure you are comfortable with these CSS styling options:
+
+Font styling (font size, font color, etc.) 
+
+Flex Box Layout (Layout of items using CSS Flex Box Layout) 
+
+CSS Selectors 
+
+Position, Padding, Margins and Display 
+
+Colors, Background and Icons 
+
+You can refresh your knowledge of HTML and CSS in the Meta course titled: 
+Introduction to Front-End Development
+
+JavaScript fundamentals and ES6
+React is completely written in JavaScript and uses the more modern version of JavaScript which is ES6. While learning React, you should already know JavaScript fundamentals. 
+
+JavaScript is the programming language and React is a JavaScript UI library. This means the first step is to be proficient at JavaScript.
+
+Here are some of the JavaScript topics that you need to be comfortable with before you begin your journey learning React.
+
+Data types 
+
+Using var, let and const 
+
+Conditionals and Loops 
+
+Using objects, arrays and functions 
+
+ES6 Arrow functions 
+
+In-built functions such as map(), forEach() and promises. 
+
+Destructuring Arrays and Objects 
+
+Error Handling 
+
+Package Manager (Node + npm)
+React is a UI library, and you will encounter that many times you will need to add other packages to your React application. A package in JavaScript contains all the files needed for a module. To install these packages effectively and manage their dependencies you can use a package manager like NPM (Node Package Manager).
+
+You can install npm by installing Node.js, which will then automatically install npm.
+
+You need to be comfortable with using npm as your package manager, since you will be using npm to install packages within your React application.  Make sure you are aware of how to do the following with npm before you get started on this course.
+
+Installation command to install npm modules in your project 
+
+Installing a package as a dev dependency 
+
+Start command 
+
+Updating npm version 
+
+Navigating around the package.json file 
+
+----------------------------
+JavaScript Modules
+In JavaScript, a module is simply a file.
+
+The purpose of a module is to have more modular code, where you can work with smaller files, and import and export them so that the apps you build are more customizable and have more composable parts.
+
+A module can be as simple as a single function in a separate file.
+
+Consider the following function declaration:
+function addTwo(a, b) {
+    console.log(a + b);
+}
+Say that you have a file named addTwo.js that contains only the above code.
+
+How would you make this file a JavaScript module?
+
+All that you would need to do to make it a JavaScript module is use the export syntax.
+
+Module Exports
+There is more than one way to export a module in JavaScript.
+
+While all the various syntactical differences are not listed, here are a few examples that will cover all the ways that the importing and exporting of JavaScript modules will be done in this course.
+
+In general, there are two ways to export modules in JavaScript:
+
+Using default exports 
+
+Using named exports 
+
+Default Exports
+You can have one default export per JavaScript module.
+
+Using the above addTwo.js file as an example, here are two ways to perform a default export:
+export default function addTwo(a, b) {
+    console.log(a + b);
+}
+So, in the above example, you’re adding the export default keywords in front of the addTwo function declaration.
+
+Here's an alternative syntax:
+function addTwo(a, b) {
+    console.log(a + b);
+}
+export default addTwo;
+
+
+Named Exports
+Named exports are a way to export only certain parts of a given JavaScript file.
+
+In contrast with default exports, you can export as many items from any JavaScript file as you want.
+
+In other words, there can be only one default export, but as many named exports as you want.
+
+For example:
+function addTwo(a, b) {
+    console.log(a + b);
+}
+function addThree(a, b, c) {
+    console.log(a + b + c);
+}
+
+If you want to export both the addTwo and the addThree functions as named exports, one way to do it would be the following:
+export function addTwo(a, b) {
+    console.log(a + b);
+}
+
+export function addThree(a, b, c) {
+    console.log(a + b + c);
+}
+
+Here's another way you could do it:
+
+function addTwo(a, b) {
+    console.log(a + b);
+}
+function addThree(a, b, c) {
+    console.log(a + b + c);
+}
+export { addTwo, addThree };
+
+Importing Modules
+Just like when exporting modules in JavaScript, there are several ways to import them.
+
+The exact syntax depends on how the module was exported.
+
+Say that you have two modules in a folder.
+
+The first module is addTwo.js and the second module is mathOperations.js.
+
+You want to import the addTwo.js module into the mathOperations.js module.
+
+Importing a Module that was Exported as Default
+Consider the previous example of exporting the addTwo function as a default module:
+
+To import it into the mathOperations.js module, you could use the following syntax:
+import addTwo from "./addTwo";
+// the rest of the mathOperations.js code goes here
+
+So, you could start this import with the import keyword, then the name under which you’ll use this imported code inside the mathOperations.js file. You would then type the keyword from, and finally the location of the file, without the .js extension.
+
+Contrast the above import of the default addTwo export with the different import syntax if the addTwo function was instead a named export
+import { addTwo } from "./addTwo";
+
+
