@@ -1,3 +1,6 @@
+ React to provide something known as the virtual DOM. You may recall that this is an in-memory representation or clone of the real DOM which minimizes updates to the DOM itself. React uses the virtual DOM to update the browser Dom only when needed. This ensures that the update is as minimal as possible, increasing the application speed and performance.
+
+
 complex components
 working in state with react
 HTML
